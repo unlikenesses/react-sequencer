@@ -103,6 +103,9 @@ class App extends Component {
 		        	pos={this.state.pos} 
 		        	pads={this.state.pads} 
 		        	toggleActive={this.toggleActive} />
+		        <p className="link">
+		        	<a href="https://github.com/unlikenesses/react-sequencer">View the code on GitHub</a>
+		        </p>
 		    </div>
 		);
 	}

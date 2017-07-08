@@ -79,3 +79,7 @@ button {
 .pad.active.playing, .pad.active:hover {
 	background: lime;
 }
+
+p.link a {
+	color: silver;
+}
