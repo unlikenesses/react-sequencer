@@ -1,14 +1,10 @@
 import React from 'react';
 
-class Pad extends React.Component {
-	render() {
-		return (
-			<div 
-				className={"pad " + (this.props.state === 1 ? 'active' : '') + (this.props.pos === this.props.id ? ' playing' : '')}
-				onClick={() => this.props.toggleActive(this.props.rowIndex, this.props.id)}>
-			</div>
-		);
-	}
-}
+const Pad = (props) => (
+	<div 
+		className={"pad " + (props.state === 1 ? 'active' : '') + (props.pos === props.id ? ' playing' : '')}
+		onClick={() => props.toggleActive(props.rowIndex, props.id)}>
+	</div>
+);
 
 export default Pad;
