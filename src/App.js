@@ -10,6 +10,7 @@ class App extends Component {
 		this.gain = this.audioCx.createGain();
 		this.gain.connect(this.audioCx.destination);
 		this.gain.gain.value = 1;
+		this.frequencies = [261.63, 277.18, 293.66, 311.13, 329.63, 349.23, 369.99, 392];
 		this.state = {
 			pads: [
 				[0, 0, 0, 0, 0, 0, 0, 0],
@@ -23,8 +24,7 @@ class App extends Component {
 			],
 			playing: false,
 			pos: 0,
-			bpm: 220,
-			frequencies: [261.63, 277.18, 293.66, 311.13, 329.63, 349.23, 369.99, 392]
+			bpm: 220
 		}
 		this.togglePlaying = this.togglePlaying.bind(this);
 		this.toggleActive = this.toggleActive.bind(this);
@@ -58,7 +58,7 @@ class App extends Component {
 		});
 	}
 	playSound(rowIndex) {
-		var freq = this.state.frequencies[rowIndex];
+		var freq = this.frequencies[rowIndex];
 		var node = this.audioCx.createOscillator();
 		var currentTime = this.audioCx.currentTime;
 		node.frequency.value = freq;
