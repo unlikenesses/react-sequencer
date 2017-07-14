@@ -2,7 +2,7 @@ import React from 'react';
 import Pad from './Pad';
 
 const Pads = (props) => (
-	<div classNam	e="pads">
+	<div className="pads">
 		{props.pads.map((row, rowIndex) => {
 			return (
 				<div className="row" key={rowIndex}>
