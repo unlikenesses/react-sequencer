@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Controls = (props) => {
-	var buttonText = props.playing ? 'Stop' : 'Play';
+	let buttonText = props.playing ? 'Stop' : 'Play';
 	return (
 		<div className="controls">
 			<button onClick={() => props.togglePlaying()}>{buttonText}</button>

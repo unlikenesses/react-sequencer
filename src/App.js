@@ -40,7 +40,7 @@ class App extends Component {
 		}
 	}
 	tick() {
-		var pos = this.state.pos;
+		let pos = this.state.pos;
 		pos++;
 		if (pos > 7) {
 			pos = 0;
@@ -58,9 +58,9 @@ class App extends Component {
 		});
 	}
 	playSound(rowIndex) {
-		var freq = this.frequencies[rowIndex];
-		var node = this.audioCx.createOscillator();
-		var currentTime = this.audioCx.currentTime;
+		let freq = this.frequencies[rowIndex];
+		let node = this.audioCx.createOscillator();
+		let currentTime = this.audioCx.currentTime;
 		node.frequency.value = freq;
 		node.detune.value = 0;
 		node.type = 'sine';
@@ -82,8 +82,8 @@ class App extends Component {
 		this.timerId = setInterval(() => this.tick(), this.calculateTempo(this.state.bpm));
 	}
 	toggleActive(rowIndex, id) {
-		var pads = [...this.state.pads];
-		var padState = pads[rowIndex][id];
+		let pads = [...this.state.pads];
+		let padState = pads[rowIndex][id];
 		if (padState === 1) {
 			pads[rowIndex][id] = 0;
 		} else {
